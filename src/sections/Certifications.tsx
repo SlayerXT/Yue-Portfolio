@@ -18,49 +18,49 @@ const certifications: Certification[] = [
     id: 1,
     title: 'Applied Text Mining in Python',
     provider: 'University of Michigan (Coursera)',
-    verifyUrl: '#',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/7I11412JFIYD',
     category: 'Data Science'
   },
   {
     id: 2,
     title: 'Introduction to PySpark',
     provider: 'DataCamp',
-    verifyUrl: '#',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/3JJ2R65G2FS0',
     category: 'Big Data'
   },
   {
     id: 3,
     title: 'Applied Machine Learning in Python',
     provider: 'University of Michigan (Coursera)',
-    verifyUrl: '#',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/2056BGYZ4XCJ',
     category: 'Machine Learning'
   },
   {
     id: 4,
     title: 'Databases and SQL for Data Science with Python',
     provider: 'IBM (Coursera)',
-    verifyUrl: '#',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/6WF32DV3ZI6W',
     category: 'Database'
   },
   {
     id: 5,
     title: 'Applied Plotting, Charting & Data Representation in Python',
     provider: 'University of Michigan (Coursera)',
-    verifyUrl: '#',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/9PSUEEMKN4U0',
     category: 'Visualization'
   },
   {
     id: 6,
     title: 'Introduction to Data Science in Python',
     provider: 'University of Michigan (Coursera)',
-    verifyUrl: '#',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/PT8P511JKJ4C',
     category: 'Data Science'
   },
   {
     id: 7,
     title: 'Junior Penetration Tester',
     provider: 'INE',
-    verifyUrl: '#',
+    verifyUrl: 'https://certs.ine.com/d89de521-fb17-413c-8d33-d6f405998391#acc.T9BkPQ4F',
     category: 'Security'
   }
 ];

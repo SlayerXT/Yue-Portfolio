@@ -63,7 +63,7 @@ const projects: Project[] = [
     title: 'Advanced TMR Sensor Calibration',
     category: 'Academic Research & Engineering AI',
     description: 'Master thesis research on improving angle estimation accuracy for industrial/automotive TMR sensors. Compared analytical methods (linear, harmonic correction, ellipse fitting) with a CNN-based regression model to solve nonlinear distortion, phase imbalance, and noise sensitivity.',
-    image: '/assets/tmr-1.png',
+    image: '/assets/project-4.png',
     techStack: ['CNN', 'Data Cleaning', 'Ellipse Fitting', 'Linear Calibration', 'Harmonic Calibration', 'Python', 'Jupyter'],
     links: {
       download: '/assets/Yue_Hu_Thesis_Presentation.pptx'
