@@ -30,7 +30,7 @@ const projects: Project[] = [
     image: '/assets/project-1.png',
     techStack: ['Python', 'SQL', 'Tableau', 'Pandas', 'RFM Analysis'],
     links: {
-      dashboard: 'https://public.tableau.com/app/profile/yue.hu8512/viz/Book2_17575246511870/Dashboard1',
+      dashboard: 'https://public.tableau.com/app/profile/yue.hu8512/viz/1_17559239243320/1_1',
       github: 'https://github.com/SlayerXT/E-commerce-User-Behavior-and-Category-Operation-Insights-'
     }
   },
@@ -42,7 +42,7 @@ const projects: Project[] = [
     image: '/assets/project-2.png',
     techStack: ['Tableau', 'Cohort Analysis', 'RFM Segmentation', 'Python'],
     links: {
-      dashboard: 'https://public.tableau.com/app/profile/yue.hu8512/viz/1_17559239243320/1_1',
+      dashboard: 'https://public.tableau.com/app/profile/yue.hu8512/viz/Book2_17575246511870/Dashboard1',
       github: 'https://github.com/SlayerXT/Analysis-of-the-Netflix-2025-User-Behavior-Dataset'
     }
   },
