@@ -71,7 +71,7 @@ const categoryColors: Record<string, string> = {
   'Machine Learning': 'text-green-400 border-green-400/30 bg-green-400/10',
   'Database': 'text-yellow-400 border-yellow-400/30 bg-yellow-400/10',
   'Visualization': 'text-pink-400 border-pink-400/30 bg-pink-400/10',
-  'Security': 'text-red-400 border-red-400/30 bg-red-400/10'
+  'Cyber Security': 'text-red-400 border-red-400/30 bg-red-400/10'
 };
 
 const Certifications = () => {
