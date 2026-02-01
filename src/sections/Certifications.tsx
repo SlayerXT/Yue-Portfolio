@@ -61,7 +61,7 @@ const certifications: Certification[] = [
     title: 'Junior Penetration Tester',
     provider: 'INE',
     verifyUrl: 'https://certs.ine.com/d89de521-fb17-413c-8d33-d6f405998391#acc.T9BkPQ4F',
-    category: 'Security'
+    category: 'Cyber Security'
   }
 ];
 
