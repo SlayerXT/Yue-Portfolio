@@ -81,9 +81,10 @@ const RotaryKnob = ({
 
 interface HeroProps {
   onUnlock: () => void;
+  onSkip: () => void;  // 新增
 }
 
-const Hero = ({ onUnlock }: HeroProps) => {
+const Hero = ({ onUnlock, onSkip }: HeroProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -427,6 +428,14 @@ const Hero = ({ onUnlock }: HeroProps) => {
             <span className="text-xs font-mono text-[#00CCFF] w-10">{Math.round(logic)}%</span>
           </div>
         </div>
+        
+        {/* Skip Button */}
+        <button
+          onClick={onSkip}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 text-xs font-mono text-gray-600 hover:text-osc-green transition-colors border border-transparent hover:border-osc-green/30 rounded"
+        >
+          [ SKIP ANIMATION → ]
+        </button>
         
         {/* Corner Decorations */}
         <div className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-osc-green/30" />
