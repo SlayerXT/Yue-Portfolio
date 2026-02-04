@@ -14,34 +14,46 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [showContent, setShowContent] = useState(false);
+  const [skipAnimation, setSkipAnimation] = useState(false);
 
   useEffect(() => {
-    // Check if user has already unlocked (for development convenience)
+    // 检查 URL 参数，如果 ?skip=true 则直接显示内容
+    const urlParams = new URLSearchParams(window.location.search);
+    const shouldSkip = urlParams.get('skip') === 'true';
+    
+    // 检查本地存储
     const hasUnlocked = sessionStorage.getItem('portfolio-unlocked');
-    if (hasUnlocked === 'true') {
+    
+    if (shouldSkip || hasUnlocked === 'true') {
+      setSkipAnimation(true);
       setIsUnlocked(true);
       setShowContent(true);
+      // 清除 URL 参数
+      if (shouldSkip) {
+        window.history.replaceState({}, '', window.location.pathname);
+      }
     }
   }, []);
 
   const handleUnlock = () => {
     sessionStorage.setItem('portfolio-unlocked', 'true');
     setIsUnlocked(true);
-    
-    // Small delay before showing content for smooth transition
     setTimeout(() => {
       setShowContent(true);
     }, 100);
   };
 
-  // Initialize smooth scroll and animations after unlock
+  // 跳过动画直接进入
+  const handleSkip = () => {
+    setSkipAnimation(true);
+    setIsUnlocked(true);
+    setShowContent(true);
+    sessionStorage.setItem('portfolio-unlocked', 'true');
+  };
+
   useEffect(() => {
     if (!showContent) return;
-
-    // Refresh ScrollTrigger after content is visible
     ScrollTrigger.refresh();
-
-    // Entrance animation for main content
     gsap.fromTo('.main-content',
       { opacity: 0 },
       { opacity: 1, duration: 0.8, ease: 'power2.out' }
@@ -50,19 +62,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A]">
-      {/* Hero / Signal Tuner - Always rendered but hidden after unlock */}
-      {!isUnlocked && <Hero onUnlock={handleUnlock} />}
+      {!isUnlocked && <Hero onUnlock={handleUnlock} onSkip={handleSkip} />}
 
-      {/* Main Content - Shown after unlock */}
       {showContent && (
         <div className="main-content">
-          {/* Global Scanline Overlay */}
           <div className="scanlines" />
-          
-          {/* Navigation */}
           <Navigation />
-
-          {/* Main Sections */}
           <main>
             <Projects />
             <div className="section-divider" />
